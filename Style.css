@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+}
+h1 {
+    text-align: center;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    /* background-color: rgb(209, 209, 209); */
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: white;
+    margin-left: -50px;
+    margin-top: -50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 10px solid rgb(17, 0, 255);
+    
+    border-left-color: transparent;
+    animation: spin;
+    -webkit-animation: spin,change-color;
+    animation-duration: 1s ,5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-color {
+    0% {
+        border-color: red;
+        color: white;
+    }
+    50% {
+        border-color: blue;
+        color: red;
+    }
+    75% {
+        border-color: black;
+        color: #eee;
+    }
+    100% {
+        border-color: rgb(0, 255, 0);
+        color: white;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0turn);
+        -webkit-transform: rotate(0turn);
+        -moz-transform: rotate(0turn);
+        -ms-transform: rotate(0turn);
+        -o-transform: rotate(0turn);
+}
+
+    100% {
+        transform: rotate(1turn);
+        -webkit-transform: rotate(1turn);
+        -moz-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        -o-transform: rotate(1turn);
+}
+}
